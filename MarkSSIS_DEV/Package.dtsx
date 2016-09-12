@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{DC5713B1-5D38-41FA-AD5C-FD976CC80498}">
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{6E512BF4-4BFF-4FD4-81C8-755DFE717547}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -32,7 +32,7 @@
         <SQLTask:SqlTaskData
           SQLTask:Connection="{C02DB14F-F0FF-4BEC-BCA8-6A87CC88719D}"
           SQLTask:BypassPrepare="False"
-          SQLTask:SqlStatementSource="truncate table dbo.Table_1;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="truncate table dbo.GitTesting;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
