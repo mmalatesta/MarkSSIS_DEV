@@ -11,12 +11,29 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{69867F9B-E4F6-44BD-8944-E9BD9BEEF206}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{CBE02652-BD19-4165-AD4A-D05CDDD39883}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
   <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\SQL Delete Record"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{37EA049D-504A-4F45-9801-B3751255353E}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL Delete Record"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C02DB14F-F0FF-4BEC-BCA8-6A87CC88719D}"
+          SQLTask:SqlStatementSource="delete from dbo.GitTesting&#xA;where git_id ='A'&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\SQL Insert record"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
@@ -62,6 +79,14 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\SQL Insert record" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{06279F57-2631-4710-9F49-817D91CC0831}"
+      DTS:From="Package\SQL Insert record"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\SQL Delete Record" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -74,41 +99,79 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="164,42"
+          Id="Package\SQL Insert record"
+          TopLeft="244,249" />
         <NodeLayout
           Size="196,42"
           Id="Package\SQL Truncate GitTesting"
           TopLeft="102,122" />
-        <NodeLayout
-          Size="164,42"
-          Id="Package\SQL Insert record"
-          TopLeft="244,248" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="200,164">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="126,84"
+              EndConnector="126,85"
               Start="0,0"
-              End="126,76.5">
+              End="126,77.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38" />
+                    End="0,38.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,38"
-                    Point2="0,42"
-                    Point3="4,42" />
+                    Point1="0,38.5"
+                    Point2="0,42.5"
+                    Point3="4,42.5" />
                   <mssgle:LineSegment
-                    End="122,42" />
+                    End="122,42.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="122,42"
-                    Point2="126,42"
-                    Point3="126,46" />
+                    Point1="122,42.5"
+                    Point2="126,42.5"
+                    Point3="126,46.5" />
                   <mssgle:LineSegment
-                    End="126,76.5" />
+                    End="126,77.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="169,42"
+          Id="Package\SQL Delete Record"
+          TopLeft="515,209" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="408,270">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="107,-40"
+              Start="0,0"
+              End="99.5,-40">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="49.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="49.5,0"
+                    Point2="53.5,0"
+                    Point3="53.5,-4" />
+                  <mssgle:LineSegment
+                    End="53.5,-36" />
+                  <mssgle:CubicBezierSegment
+                    Point1="53.5,-36"
+                    Point2="53.5,-40"
+                    Point3="57.5,-40" />
+                  <mssgle:LineSegment
+                    End="99.5,-40" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
