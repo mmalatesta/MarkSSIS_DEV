@@ -11,12 +11,29 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{CBE02652-BD19-4165-AD4A-D05CDDD39883}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{31007ADC-9535-4A2B-B39A-C7653F013F3B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
   <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\rename this"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{89FFE7BF-CD1C-44F9-8B6F-215F5EA5A05C}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="rename this"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C02DB14F-F0FF-4BEC-BCA8-6A87CC88719D}"
+          SQLTask:SqlStatementSource="insert into dbo.GitTesting&#xA;select 'A';" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\SQL Delete Record"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
@@ -32,23 +49,6 @@
         <SQLTask:SqlTaskData
           SQLTask:Connection="{C02DB14F-F0FF-4BEC-BCA8-6A87CC88719D}"
           SQLTask:SqlStatementSource="delete from dbo.GitTesting&#xA;where git_id ='A'&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\SQL Insert record"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:DTSID="{89FFE7BF-CD1C-44F9-8B6F-215F5EA5A05C}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="SQL Insert record"
-      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{C02DB14F-F0FF-4BEC-BCA8-6A87CC88719D}"
-          SQLTask:SqlStatementSource="insert into dbo.GitTesting&#xA;select 'A';" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -78,12 +78,12 @@
       DTS:From="Package\SQL Truncate GitTesting"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\SQL Insert record" />
+      DTS:To="Package\rename this" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
       DTS:DTSID="{06279F57-2631-4710-9F49-817D91CC0831}"
-      DTS:From="Package\SQL Insert record"
+      DTS:From="Package\rename this"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
       DTS:To="Package\SQL Delete Record" />
@@ -101,9 +101,13 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="164,42"
-          Id="Package\SQL Insert record"
-          TopLeft="244,249" />
+          Size="169,42"
+          Id="Package\SQL Delete Record"
+          TopLeft="515,209" />
+        <NodeLayout
+          Size="137,42"
+          Id="Package\rename this"
+          TopLeft="243,250" />
         <NodeLayout
           Size="196,42"
           Id="Package\SQL Truncate GitTesting"
@@ -114,26 +118,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="126,85"
+              EndConnector="111.5,86"
               Start="0,0"
-              End="126,77.5">
+              End="111.5,78.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38.5" />
+                    End="0,39" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,38.5"
-                    Point2="0,42.5"
-                    Point3="4,42.5" />
+                    Point1="0,39"
+                    Point2="0,43"
+                    Point3="4,43" />
                   <mssgle:LineSegment
-                    End="122,42.5" />
+                    End="107.5,43" />
                   <mssgle:CubicBezierSegment
-                    Point1="122,42.5"
-                    Point2="126,42.5"
-                    Point3="126,46.5" />
+                    Point1="107.5,43"
+                    Point2="111.5,43"
+                    Point3="111.5,47" />
                   <mssgle:LineSegment
-                    End="126,77.5" />
+                    End="111.5,78.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -142,36 +146,32 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="169,42"
-          Id="Package\SQL Delete Record"
-          TopLeft="515,209" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="408,270">
+          TopLeft="380,271">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="107,-40"
+              EndConnector="135,-41"
               Start="0,0"
-              End="99.5,-40">
+              End="127.5,-41">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="49.5,0" />
+                    End="63.5,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="49.5,0"
-                    Point2="53.5,0"
-                    Point3="53.5,-4" />
+                    Point1="63.5,0"
+                    Point2="67.5,0"
+                    Point3="67.5,-4" />
                   <mssgle:LineSegment
-                    End="53.5,-36" />
+                    End="67.5,-37" />
                   <mssgle:CubicBezierSegment
-                    Point1="53.5,-36"
-                    Point2="53.5,-40"
-                    Point3="57.5,-40" />
+                    Point1="67.5,-37"
+                    Point2="67.5,-41"
+                    Point3="71.5,-41" />
                   <mssgle:LineSegment
-                    End="99.5,-40" />
+                    End="127.5,-41" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
