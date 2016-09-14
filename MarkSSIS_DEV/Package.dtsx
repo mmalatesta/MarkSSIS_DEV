@@ -11,20 +11,20 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{31007ADC-9535-4A2B-B39A-C7653F013F3B}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{C6F7C3E3-D78B-4D2E-89B3-5523ABD233E0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\rename this"
+      DTS:refId="Package\sfgsfgsfgsfg"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{89FFE7BF-CD1C-44F9-8B6F-215F5EA5A05C}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="rename this"
+      DTS:ObjectName="sfgsfgsfgsfg"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
@@ -78,12 +78,12 @@
       DTS:From="Package\SQL Truncate GitTesting"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\rename this" />
+      DTS:To="Package\sfgsfgsfgsfg" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
       DTS:DTSID="{06279F57-2631-4710-9F49-817D91CC0831}"
-      DTS:From="Package\rename this"
+      DTS:From="Package\sfgsfgsfgsfg"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
       DTS:To="Package\SQL Delete Record" />
@@ -101,13 +101,13 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="137,42"
+          Id="Package\sfgsfgsfgsfg"
+          TopLeft="243,250" />
+        <NodeLayout
           Size="169,42"
           Id="Package\SQL Delete Record"
           TopLeft="515,209" />
-        <NodeLayout
-          Size="137,42"
-          Id="Package\rename this"
-          TopLeft="243,250" />
         <NodeLayout
           Size="196,42"
           Id="Package\SQL Truncate GitTesting"
