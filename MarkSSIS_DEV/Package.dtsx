@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{C6F7C3E3-D78B-4D2E-89B3-5523ABD233E0}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{7E8D1774-478A-45BF-A649-6E206998DF2F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -82,7 +82,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{06279F57-2631-4710-9F49-817D91CC0831}"
+      DTS:DTSID="{AB97ED66-2E5D-4B14-9C0B-0B27CA5556B6}"
       DTS:From="Package\sfgsfgsfgsfg"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
@@ -107,7 +107,7 @@
         <NodeLayout
           Size="169,42"
           Id="Package\SQL Delete Record"
-          TopLeft="515,209" />
+          TopLeft="699,49" />
         <NodeLayout
           Size="196,42"
           Id="Package\SQL Truncate GitTesting"
@@ -148,30 +148,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="380,271">
+          TopLeft="333,250">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="135,-41"
+              EndConnector="450.5,-159"
               Start="0,0"
-              End="127.5,-41">
+              End="450.5,-151.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="63.5,0" />
+                    End="0,-60.7012987012987" />
                   <mssgle:CubicBezierSegment
-                    Point1="63.5,0"
-                    Point2="67.5,0"
-                    Point3="67.5,-4" />
+                    Point1="0,-60.7012987012987"
+                    Point2="0,-64.7012987012987"
+                    Point3="4,-64.7012987012987" />
                   <mssgle:LineSegment
-                    End="67.5,-37" />
+                    End="446.5,-64.7012987012987" />
                   <mssgle:CubicBezierSegment
-                    Point1="67.5,-37"
-                    Point2="67.5,-41"
-                    Point3="71.5,-41" />
+                    Point1="446.5,-64.7012987012987"
+                    Point2="450.5,-64.7012987012987"
+                    Point3="450.5,-68.7012987012987" />
                   <mssgle:LineSegment
-                    End="127.5,-41" />
+                    End="450.5,-151.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
