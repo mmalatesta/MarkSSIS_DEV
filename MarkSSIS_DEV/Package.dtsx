@@ -12,8 +12,8 @@
   DTS:ObjectName="Package"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{62E212F3-F25B-4315-8C88-D9167EB17791}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{CA2BDC8F-679D-4E14-B5BD-FDD6203D1C0E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -36,13 +36,13 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\SQL Insert record"
+      DTS:refId="Package\SQL Insert record gituser1"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{89FFE7BF-CD1C-44F9-8B6F-215F5EA5A05C}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="SQL Insert record"
+      DTS:ObjectName="SQL Insert record gituser1"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
@@ -79,12 +79,12 @@
       DTS:From="Package\SQL Truncate GitTesting"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\SQL Insert record" />
+      DTS:To="Package\SQL Insert record gituser1" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
       DTS:DTSID="{06279F57-2631-4710-9F49-817D91CC0831}"
-      DTS:From="Package\SQL Insert record"
+      DTS:From="Package\SQL Insert record gituser1"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
       DTS:To="Package\#! SQL Delete Record" />
@@ -102,43 +102,43 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="184,42"
+          Size="184,41.6"
           Id="Package\#! SQL Delete Record"
           TopLeft="515,209" />
         <NodeLayout
-          Size="164,42"
-          Id="Package\SQL Insert record"
+          Size="204.8,41.6"
+          Id="Package\SQL Insert record gituser1"
           TopLeft="205,283" />
         <NodeLayout
-          Size="196,42"
+          Size="196,41.6"
           Id="Package\SQL Truncate GitTesting"
           TopLeft="102,122" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="200,164">
+          TopLeft="200,163.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="61,119"
+              EndConnector="74.6,119.4"
               Start="0,0"
-              End="61,111.5">
+              End="74.6,111.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,66.7101449275362" />
+                    End="0,67.0846511627907" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,66.7101449275362"
-                    Point2="0,70.7101449275362"
-                    Point3="4,70.7101449275362" />
+                    Point1="0,67.0846511627907"
+                    Point2="0,71.0846511627907"
+                    Point3="4,71.0846511627907" />
                   <mssgle:LineSegment
-                    End="57,70.7101449275362" />
+                    End="70.6,71.0846511627907" />
                   <mssgle:CubicBezierSegment
-                    Point1="57,70.7101449275362"
-                    Point2="61,70.7101449275362"
-                    Point3="61,74.7101449275362" />
+                    Point1="70.6,71.0846511627907"
+                    Point2="74.6,71.0846511627907"
+                    Point3="74.6,75.0846511627907" />
                   <mssgle:LineSegment
-                    End="61,111.5" />
+                    End="74.6,111.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -149,30 +149,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="313,283">
+          TopLeft="340.2,283">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="294,-32"
+              EndConnector="266.8,-32.4"
               Start="0,0"
-              End="294,-24.5">
+              End="266.8,-24.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-8.98550724637681" />
+                    End="0,-9.11069767441861" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-8.98550724637681"
-                    Point2="0,-12.9855072463768"
-                    Point3="4,-12.9855072463768" />
+                    Point1="0,-9.11069767441861"
+                    Point2="0,-13.1106976744186"
+                    Point3="4,-13.1106976744186" />
                   <mssgle:LineSegment
-                    End="290,-12.9855072463768" />
+                    End="262.8,-13.1106976744186" />
                   <mssgle:CubicBezierSegment
-                    Point1="290,-12.9855072463768"
-                    Point2="294,-12.9855072463768"
-                    Point3="294,-16.9855072463768" />
+                    Point1="262.8,-13.1106976744186"
+                    Point2="266.8,-13.1106976744186"
+                    Point3="266.8,-17.1106976744186" />
                   <mssgle:LineSegment
-                    End="294,-24.5" />
+                    End="266.8,-24.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
