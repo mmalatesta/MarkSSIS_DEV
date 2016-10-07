@@ -12,8 +12,8 @@
   DTS:ObjectName="Package"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{CA2BDC8F-679D-4E14-B5BD-FDD6203D1C0E}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{6B688B2D-D193-4E22-8AC2-5E316F7E242B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -53,13 +53,13 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\SQL Truncate GitTesting"
+      DTS:refId="Package\SQL Truncate Mark"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{A1884783-F23A-4E68-90AA-058539B1E4E1}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="SQL Truncate GitTesting"
+      DTS:ObjectName="SQL Truncate Mark"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
@@ -76,7 +76,7 @@
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
       DTS:DTSID="{A6D7D30E-DE16-4E13-833C-35BB47EEC2B1}"
-      DTS:From="Package\SQL Truncate GitTesting"
+      DTS:From="Package\SQL Truncate Mark"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\SQL Insert record gituser1" />
@@ -102,43 +102,43 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="184,41.6"
+          Size="184,42"
           Id="Package\#! SQL Delete Record"
           TopLeft="515,209" />
         <NodeLayout
-          Size="204.8,41.6"
+          Size="205,42"
           Id="Package\SQL Insert record gituser1"
           TopLeft="205,283" />
         <NodeLayout
-          Size="196,41.6"
-          Id="Package\SQL Truncate GitTesting"
-          TopLeft="102,122" />
+          Size="196,42"
+          Id="Package\SQL Truncate Mark"
+          TopLeft="102,126" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="200,163.6">
+          TopLeft="200,168">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="74.6,119.4"
+              EndConnector="74.6666666666666,115"
               Start="0,0"
-              End="74.6,111.9">
+              End="74.6666666666666,107.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,67.0846511627907" />
+                    End="0,64.4656340755082" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,67.0846511627907"
-                    Point2="0,71.0846511627907"
-                    Point3="4,71.0846511627907" />
+                    Point1="0,64.4656340755082"
+                    Point2="0,68.4656340755082"
+                    Point3="4,68.4656340755082" />
                   <mssgle:LineSegment
-                    End="70.6,71.0846511627907" />
+                    End="70.6666666666666,68.4656340755082" />
                   <mssgle:CubicBezierSegment
-                    Point1="70.6,71.0846511627907"
-                    Point2="74.6,71.0846511627907"
-                    Point3="74.6,75.0846511627907" />
+                    Point1="70.6666666666666,68.4656340755082"
+                    Point2="74.6666666666666,68.4656340755082"
+                    Point3="74.6666666666666,72.4656340755082" />
                   <mssgle:LineSegment
-                    End="74.6,111.9" />
+                    End="74.6666666666666,107.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
