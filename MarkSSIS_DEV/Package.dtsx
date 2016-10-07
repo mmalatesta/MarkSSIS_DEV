@@ -12,8 +12,8 @@
   DTS:ObjectName="Package"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{6B688B2D-D193-4E22-8AC2-5E316F7E242B}">
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{400328CD-D82A-41B2-AF19-0D5F288FE809}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -53,13 +53,13 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\SQL Truncate Mark"
+      DTS:refId="Package\SQL Truncate MM"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{A1884783-F23A-4E68-90AA-058539B1E4E1}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="SQL Truncate Mark"
+      DTS:ObjectName="SQL Truncate MM"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
@@ -76,7 +76,7 @@
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
       DTS:DTSID="{A6D7D30E-DE16-4E13-833C-35BB47EEC2B1}"
-      DTS:From="Package\SQL Truncate Mark"
+      DTS:From="Package\SQL Truncate MM"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\SQL Insert record gituser1" />
@@ -110,18 +110,18 @@
           Id="Package\SQL Insert record gituser1"
           TopLeft="205,283" />
         <NodeLayout
-          Size="196,42"
-          Id="Package\SQL Truncate Mark"
+          Size="165,42"
+          Id="Package\SQL Truncate MM"
           TopLeft="102,126" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="200,168">
+          TopLeft="187.5,168">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="74.6666666666666,115"
+              EndConnector="87.1666666666666,115"
               Start="0,0"
-              End="74.6666666666666,107.5">
+              End="87.1666666666666,107.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -132,13 +132,13 @@
                     Point2="0,68.4656340755082"
                     Point3="4,68.4656340755082" />
                   <mssgle:LineSegment
-                    End="70.6666666666666,68.4656340755082" />
+                    End="83.1666666666666,68.4656340755082" />
                   <mssgle:CubicBezierSegment
-                    Point1="70.6666666666666,68.4656340755082"
-                    Point2="74.6666666666666,68.4656340755082"
-                    Point3="74.6666666666666,72.4656340755082" />
+                    Point1="83.1666666666666,68.4656340755082"
+                    Point2="87.1666666666666,68.4656340755082"
+                    Point3="87.1666666666666,72.4656340755082" />
                   <mssgle:LineSegment
-                    End="74.6666666666666,107.5" />
+                    End="87.1666666666666,107.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
